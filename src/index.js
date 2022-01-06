@@ -1,3 +1,8 @@
 module.exports = function reverse (n) {
-    return +(String(n).split("").reverse().join(""));
+    n = String(n)
+  if (n.startsWith("-")) {
+    return -(n.slice(1).split("").reverse().join(""))
+  } else {
+    return +(n.split("").reverse().join(""))
+  }
 }
